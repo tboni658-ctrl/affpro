@@ -1,0 +1,41 @@
+/* Firebase Status Indicator */
+.firebase-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(26, 26, 46, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.firebase-status.connected {
+  background: rgba(76, 175, 80, 0.2);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.firebase-status.disconnected {
+  background: rgba(244, 67, 54, 0.2);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.firebase-status i {
+  font-size: 14px;
+}
+
+.firebase-status.connected i {
+  color: var(--success);
+}
+
+.firebase-status.disconnected i {
+  color: var(--error);
+}
